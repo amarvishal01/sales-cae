@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amar Vishal · Territory Sales (CAE/CFD)</title>
+  <meta name="description" content="Territory Sales Manager (CAE/CFD) with hands-on NX/Teamcenter, FEA, and initiated CFD studies. Built Germany B2B pipeline, reduced cycle time via tighter spec gathering and ROI framing." />
+  <meta property="og:title" content="Amar Vishal · Territory Sales (CAE/CFD)" />
+  <meta property="og:description" content="Technical seller bridging CAE with business outcomes. Discovery→Demo→Proposal. Cross‑cultural EN/DE. ~30% travel." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <style>
+    :root{
+      --bg: #0b1020;         /* deep slate */
+      --card: #11172a;       /* card base */
+      --soft: #0c1326;       /* section base */
+      --line: #1e2a4a;       /* borders */
+      --text: #e9eefc;       /* primary text */
+      --muted: #b9c3e6;      /* secondary text */
+      --brandA: #60a5fa;     /* blue */
+      --brandB: #22d3ee;     /* cyan */
+      --brandC: #a78bfa;     /* violet */
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background: radial-gradient(1200px 900px at 75% -10%, rgba(96,165,250,.16), transparent 60%),
+                  radial-gradient(900px 700px at 10% 0%, rgba(34,211,238,.14), transparent 55%),
+                  linear-gradient(180deg, #0a0f1f, #0b1020 30% 70%, #090e1a);
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .container{width:min(1120px, 92vw); margin:0 auto;}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50; backdrop-filter: saturate(180%) blur(8px);
+      background: linear-gradient(180deg, rgba(11,16,32,.85), rgba(11,16,32,.55)); border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between; padding:14px 10px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+    .dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,var(--brandB),var(--brandC)); box-shadow:0 0 24px rgba(34,211,238,.8)}
+    .nav a.btn{padding:10px 14px;border:1px solid var(--line);border-radius:12px;text-decoration:none}
+
+    /* Hero */
+    .hero{position:relative; padding:88px 0 48px}
+    .hero-grid{display:grid;grid-template-columns: 1.15fr .85fr; gap:28px; align-items:center}
+    .eyebrow{letter-spacing:.18em;color:var(--muted);text-transform:uppercase;font-size:12px}
+    h1{font-size: clamp(32px, 5vw, 56px); line-height:1.02;margin:8px 0 10px}
+    .lead{font-size: clamp(16px, 1.6vw, 18px); color:var(--muted)}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;text-decoration:none;border:1px solid var(--line);background:linear-gradient(180deg,#0e1630,#0b1328);}
+    .btn.primary{border:0;background:linear-gradient(135deg,var(--brandB),var(--brandA));color:#032230; font-weight:700}
+    .tagbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .tag{font-size:12px;color:#091126;background:linear-gradient(135deg,rgba(34,211,238,.18),rgba(96,165,250,.18)); border:1px solid rgba(104,126,196,.28); padding:8px 10px;border-radius:999px}
+
+    .card3d{position:relative; background:linear-gradient(180deg,#0f1734,#0c142b); border:1px solid var(--line); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); transform-style:preserve-3d; will-change:transform}
+    .kpis{display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin-top:18px}
+    .kpi h3{margin:2px 0 4px; font-size:22px}
+    .kpi p{margin:0;color:var(--muted);font-size:13px}
+
+    /* Sections */
+    section{padding:40px 0}
+    h2{font-size: clamp(22px, 2.2vw, 28px); margin:0 0 16px}
+    .grid{display:grid; gap:16px}
+    .grid.cols-3{grid-template-columns: repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns: repeat(2,1fr)}
+    .item{background:linear-gradient(180deg,#0e1733,#0b1327); border:1px solid var(--line); border-radius:var(--radius); padding:18px}
+    .item h3{margin:0 0 6px}
+    .muted{color:var(--muted)}
+
+    /* Footer */
+    footer{padding:46px 0; border-top:1px solid var(--line); background:linear-gradient(180deg,#0a0f1f,#0a0f1f)}
+
+    /* Reveal on scroll */
+    .reveal{opacity:0; transform: translateY(16px) scale(.98); transition: all .7s cubic-bezier(.2,.65,.2,1)}
+    .reveal.in{opacity:1; transform:none}
+
+    /* Subtle floating blob behind hero */
+    .blob{
+      position:absolute; inset:-120px -120px auto auto; width:420px; height:420px; filter: blur(40px); opacity:.5;
+      background: radial-gradient(closest-side,var(--brandB), transparent 70%),
+                  radial-gradient(closest-side,var(--brandC), transparent 65%);
+      mix-blend-mode:screen; border-radius:50%; animation: float 8s ease-in-out infinite alternate;
+      pointer-events:none;
+    }
+    @keyframes float { from{ transform: translateY(-8px)} to{ transform: translateY(14px)} }
+
+    /* Accessibility: reduce motion */
+    @media (prefers-reduced-motion: reduce){
+      .reveal{transition:none}
+      .blob{animation:none}
+    }
+    @media (max-width: 920px){ .hero-grid{grid-template-columns: 1fr} .kpis{grid-template-columns: repeat(2,1fr)} .grid.cols-3{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span> Amar Vishal</div>
+      <nav>
+        <a class="btn" href="#wins">Wins</a>
+        <a class="btn" href="#tech">Technical Cred</a>
+        <a class="btn" href="#collateral">Collateral</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Territory Sales · CAE/CFD</div>
+          <h1>Discovery → Demo → Proposal. <br />
+            **Technical seller** turning simulation into revenue.</h1>
+          <p class="lead">Built and ran a Germany B2B pipeline, reduced solution cycle time via tighter spec gathering and ROI framing, and collaborated with engineers to validate performance. Cross‑cultural selling (EN/DE), ~30% travel.</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Hire Me</a>
+            <a class="btn" href="./Amar_Vishal_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn" href="https://linkedin.com/in/amarvishal" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="tagbar">
+            <div class="tag">NX · Teamcenter</div>
+            <div class="tag">FEA (structural)</div>
+            <div class="tag">Initiated CFD studies</div>
+            <div class="tag">CRM workflows</div>
+            <div class="tag">Forecast accuracy</div>
+          </div>
+          <div class="kpis reveal">
+            <div class="card3d kpi" data-tilt>
+              <h3>Germany B2B</h3>
+              <p class="muted">Full-cycle: discovery → demo → proposal</p>
+            </div>
+            <div class="card3d kpi" data-tilt>
+              <h3>Faster Cycles</h3>
+              <p class="muted">Better spec capture & ROI framing</p>
+            </div>
+            <div class="card3d kpi" data-tilt>
+              <h3>EN/DE</h3>
+              <p class="muted">Cross‑cultural stakeholder management</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card3d" data-tilt>
+            <h3 style="margin:0 0 8px">What I bring</h3>
+            <ul class="muted" style="margin:0 0 6px 18px">
+              <li>Territory & account planning</li>
+              <li>Discovery & qualification (SPIN/AMPP)</li>
+              <li>Demo orchestration, proposal & pricing support</li>
+              <li>Stakeholder mapping, negotiation, objection prevention</li>
+              <li>Sales collateral & enablement, CRM hygiene</li>
+            </ul>
+            <hr style="border:0;border-top:1px solid var(--line);margin:14px 0">
+            <p class="muted" style="margin:0">Available across Germany/EU · Based in Düsseldorf · Open to ~30% travel</p>
+          </div>
+        </div>
+      </div>
+      <div class="blob" aria-hidden="true"></div>
+    </section>
+
+    <section id="wins">
+      <div class="container">
+        <h2 class="reveal">Selected Wins</h2>
+        <div class="grid cols-3">
+          <article class="item card3d reveal" data-tilt>
+            <h3>Pipeline Built & Run</h3>
+            <p class="muted">Germany-focused B2B pipeline covering discovery → demo → proposal across manufacturers and technology buyers.</p>
+          </article>
+          <article class="item card3d reveal" data-tilt>
+            <h3>Cycle Time Down</h3>
+            <p class="muted">Shortened solution cycles by tightening requirements capture, multi‑stakeholder alignment, and ROI storytelling.</p>
+          </article>
+          <article class="item card3d reveal" data-tilt>
+            <h3>Forecast ↑ Accuracy</h3>
+            <p class="muted">Created CRM workflows; improved pipeline hygiene and forecast signal quality for leadership.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech">
+      <div class="container">
+        <h2 class="reveal">Technical Cred (CAE/PLM)</h2>
+        <div class="grid cols-3">
+          <div class="item card3d reveal" data-tilt>
+            <h3>Siemens NX · Teamcenter</h3>
+            <p class="muted">Hands‑on usage; comfortable discussing data flows and change processes with engineers.</p>
+          </div>
+          <div class="item card3d reveal" data-tilt>
+            <h3>FEA</h3>
+            <p class="muted">Structural analysis literacy; collaborated with engineers to validate performance.</p>
+          </div>
+          <div class="item card3d reveal" data-tilt>
+            <h3>CFD Initiatives</h3>
+            <p class="muted">Initiated CFD study scoping; align model assumptions with customer value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collateral">
+      <div class="container">
+        <h2 class="reveal">Sales Collateral</h2>
+        <div class="grid cols-2">
+          <div class="item reveal card3d" data-tilt>
+            <h3>One‑Pager</h3>
+            <p class="muted">An anonymized one‑pager summarizing value prop, ICP, and ROI levers.</p>
+            <a class="btn" href="#" aria-disabled="true">(Add your PDF link)</a>
+          </div>
+          <div class="item reveal card3d" data-tilt>
+            <h3>Sales Deck Excerpt</h3>
+            <p class="muted">3 slides showing discovery insights → demo alignment → proposal framing.</p>
+            <a class="btn" href="#" aria-disabled="true">(Add your deck link)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="reveal">Contact</h2>
+        <div class="grid cols-2">
+          <div class="item card3d reveal" data-tilt>
+            <h3>Let’s talk</h3>
+            <p class="muted">Email: <a href="mailto:amarvishal01@gmail.com">amarvishal01@gmail.com</a><br> Phone: <a href="tel:+4915255825941">+49 1525 5825941</a></p>
+            <div class="cta">
+              <a class="btn primary" href="mailto:amarvishal01@gmail.com?subject=Territory%20Sales%20%28CAE%2FCFD%29%20—%20Intro">Email Me</a>
+              <a class="btn" href="https://linkedin.com/in/amarvishal" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+          <div class="item card3d reveal" data-tilt>
+            <h3>Location</h3>
+            <p class="muted">Based in Düsseldorf, available across Germany/EU · Open to ~30% travel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <p class="muted" style="margin:0">© <span id="y"></span> Amar Vishal</p>
+      <p class="muted" style="margin:0">This page is NDA‑safe and anonymized.
+    </div>
+  </footer>
+
+  <script>
+    // Year stamp
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Simple reveal-on-scroll
+    const io = new IntersectionObserver((entries)=>{
+      for (const e of entries){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Lightweight 3D tilt effect (no dependencies)
+    const tiltEls = document.querySelectorAll('[data-tilt]');
+    const damp = (x, a=.1)=>a*x;
+    tiltEls.forEach(card=>{
+      let rx=0, ry=0, cx=0, cy=0; // rotation targets
+      const max=10; // deg
+      const up = ()=>{
+        card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+        requestAnimationFrame(up);
+      }; up();
+      card.addEventListener('mousemove', (e)=>{
+        const r = card.getBoundingClientRect();
+        cx = (e.clientX - r.left) / r.width;   // 0..1
+        cy = (e.clientY - r.top) / r.height;  // 0..1
+        const ty = (cx - .5) * (max*2);
+        const tx = - (cy - .5) * (max*2);
+        rx += damp(tx - rx); ry += damp(ty - ry);
+      });
+      card.addEventListener('mouseleave', ()=>{ rx=0; ry=0; });
+    });
+  </script>
+</body>
+</html>
